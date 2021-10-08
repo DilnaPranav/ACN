@@ -1,0 +1,102 @@
+1) 
+exam@debian:~$ mkdir sales
+exam@debian:~$ cd sales
+exam@debian:~/sales$ mkdir Location1
+exam@debian:~/sales$ mkdir Location2
+exam@debian:~/sales$ mkdir Location3
+exam@debian:~/sales$ cd Location1
+exam@debian:~/sales/Location1$ touch sales1.txt
+exam@debian:~/sales/Location1$ touch sales2.txt
+exam@debian:~/sales/Location1$ touch sales3.txt
+exam@debian:~/sales/Location1$ cd ..
+exam@debian:~/sales$ cd Location2
+exam@debian:~/sales/Location2$ touch pu1.txt
+exam@debian:~/sales/Location2$ touch pu2.txt
+exam@debian:~/sales/Location2$ cd ..
+exam@debian:~/sales$ cd Location3
+exam@debian:~/sales/Location3$ touch stock1.txt
+exam@debian:~/sales/Location3$ touch stock2.txt
+
+1)
+exam@debian:~/sales/Location1$ cd ..
+exam@debian:~/sales$ cd Location2
+exam@debian:~/sales/Location2$ touch pur3
+exam@debian:~/sales/Location2$ cat > pur1.txt
+1 
+2
+3
+4
+exam@debian:~/sales/Location2$ cat > pur2.txt
+5
+6
+7
+8
+exam@debian:~/sales/Location2$ cat pur1.txt pur2.txt >> pur3.txt
+exam@debian:~/sales/Location2$ cat pur3.txt
+1
+2
+3
+4
+5
+6
+7
+8
+
+2)
+
+exam@debian:~/sales/Location2$ cp -r pur3.txt /home/exam/sales/Location3/stock3.txt
+exam@debian:~/sales/Location2$ ls
+pur1.txt  pur2.txt  pur3  pur3.txt
+exam@debian:~/sales/Location2$ cd ..
+exam@debian:~/sales$ cd Location3
+exam@debian:~/sales/Location3$ ls
+stock1.txt  stock2.txt  stock3.txt
+
+3)
+
+exam@debian:~/sales/Location3$ chmod +r stock3.txt
+exam@debian:~/sales/Location3$ chmod +w stock3.txt
+exam@debian:~/sales/Location3$ chmod +x stock3.txt
+
+
+
+4) 
+exam@debian:~/sales/Location3$ cat > stock1.txt
+pen
+pencil
+bottle
+bag
+eraser
+marker
+paper
+scale
+box
+text slipper
+slipper
+
+exam@debian:~/sales/Location3$ head  stock1.txt
+pen
+pencil
+bottle
+bag
+eraser
+marker
+paper
+scale
+box
+text slipper
+
+5)
+exam@debian:~/sales$ ls -R
+.:
+Location1  Location2  Location3
+
+./Location1:
+sales1.txt  sales2.txt  sales3.txt
+
+./Location2:
+pur1.txt  pur2.txt  pur3  pur3.txt
+
+./Location3:
+stock1.txt  stock2.txt  stock3.txt
+
